@@ -1,7 +1,8 @@
-import { Controller, Get, Post, Body, Put, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Put, Delete, Logger, Param, Req } from '@nestjs/common';
 import { PostsService } from './post.service';
 import { Post as BlogPost } from 'src/models/post.model';
 import { Observable } from 'rxjs';
+import { Request } from 'express';
 
 @Controller('posts')
 export class PostsController {
@@ -13,12 +14,18 @@ export class PostsController {
   }
 
   @Post()
-  async create(@Body() post: BlogPost): Promise<BlogPost> {
-    return await this.postsService.create(post);
+  create(@Body() post: BlogPost): Observable<BlogPost> {
+    const create$ = this.postsService.create(post);
+    create$.subscribe((res) => {
+      Logger.log('created doc' + res, 'PostController');
+    });
+    return create$;
   }
 
   @Put(':id')
-  updatePost() {}
+  updatePost(@Param('id') id: string, @Req() request: Request): Observable<BlogPost> {
+    return this.postsService.updatePost(id, request.body);
+  }
 
   @Delete(':id')
   deletePost() {}
