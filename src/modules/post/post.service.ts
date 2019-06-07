@@ -15,16 +15,16 @@ export class PostsService {
   }
 
   findAll(): Observable<Post[] | null> {
-    return this.postModel.find().exec();
+    return from(this.postModel.find().exec());
   }
 
   // updatePost(id: string) {
   //   return this.postModel()
   // }
   updatePost(id: string, item: Partial<Post>): Observable<Post> {
-    return this.postModel
+    return from(this.postModel
       .findByIdAndUpdate(this.toObjectId(id), item, { new: true })
-      .exec();
+      .exec());
   }
 
   private toObjectId(id: string): Types.ObjectId {
