@@ -4,7 +4,7 @@ import { Injectable } from '@nestjs/common';
 export class AppService {
   getHello(): any {
     return {
-      message: 'this should be json again',
+      message: 'Go To /posts to get the list of Posts',
     };
   }
 }

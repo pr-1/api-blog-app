@@ -28,5 +28,7 @@ export class PostsController {
   }
 
   @Delete(':id')
-  deletePost() {}
+  deletePost(@Param('id') id: string): Observable<{success: boolean}> {
+    return this.postsService.deletePost(id);
+  }
 }

@@ -1,10 +1,17 @@
-export interface UserModel {
-  name: string;
+import { Post } from './post.model';
+
+export interface User {
+  id: string;
+  username: string;
   age: number;
   gender: Gender;
+  created: Date;
+  token?: string;
+  posts?: Post[];
+  bookmarks?: Post[];
 }
 
-enum Gender {
+export enum Gender {
   MALE = 'Male',
   FEMALE = 'Female',
   TRANGENDER = 'Transgender',

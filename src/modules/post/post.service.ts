@@ -4,6 +4,7 @@ import { Types } from 'mongoose';
 import { ModelType } from 'typegoose';
 import { Post } from 'src/models/post.model';
 import { Observable, from, ObservableInput } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class PostsService {
@@ -25,6 +26,14 @@ export class PostsService {
     return from(this.postModel
       .findByIdAndUpdate(this.toObjectId(id), item, { new: true })
       .exec());
+  }
+
+  deletePost(id: string): Observable<{success: boolean}> {
+    return from(this.postModel.deleteOne({_id: id})).pipe(map((res) => {
+      return {
+        success: !!res.n,
+      };
+    }));
   }
 
   private toObjectId(id: string): Types.ObjectId {
