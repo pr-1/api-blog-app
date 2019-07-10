@@ -10,6 +10,7 @@ export class PostsController {
 
   @Get()
   getPosts(): Observable<BlogPost[] | null> {
+    Logger.log(`Get posts Api called`, 'Post Controller');
     return this.postsService.findAll();
   }
 
