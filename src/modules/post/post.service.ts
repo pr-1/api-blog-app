@@ -19,9 +19,6 @@ export class PostsService {
     return from(this.postModel.find().exec());
   }
 
-  // updatePost(id: string) {
-  //   return this.postModel()
-  // }
   updatePost(id: string, item: Partial<Post>): Observable<Post> {
     return from(this.postModel
       .findByIdAndUpdate(this.toObjectId(id), item, { new: true })

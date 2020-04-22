@@ -5,6 +5,7 @@ import { TypegooseModule } from 'nestjs-typegoose';
 import { PostModule } from './modules/post/post.module';
 import { UsersModule } from './modules/users/users.module';
 import 'dotenv/config';
+
 const dbUrl = 'mongodb+srv://blog-app-admin:qwerty1234@cluster0-cb4pe.mongodb.net/test?retryWrites=true&w=majority';
 
 @Module({
