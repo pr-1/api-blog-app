@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from 'nestjs-typegoose';
 import { Types } from 'mongoose';
 import { ModelType } from 'typegoose';
-import { Post } from 'src/models/post.model';
+import { Post } from '../../models/post.model';
 import { Observable, from, ObservableInput } from 'rxjs';
 import { map } from 'rxjs/operators';
 

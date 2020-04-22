@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Put, Delete, Logger, Param, Req } from '@nestjs/common';
 import { PostsService } from './post.service';
-import { Post as BlogPost } from 'src/models/post.model';
+import { Post as BlogPost } from '../../models/post.model';
 import { Observable } from 'rxjs';
 import { Request } from 'express';
 
