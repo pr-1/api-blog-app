@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2789000-211e-4baa-86c7-9c963d24aced" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/post.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/post.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/post/post.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/post/post.service.ts" afterDir="false" />
-    </list>
+    <list default="true" id="c2789000-211e-4baa-86c7-9c963d24aced" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +39,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -76,6 +71,7 @@
       <workItem from="1562681845112" duration="857000" />
       <workItem from="1562782207124" duration="1254000" />
       <workItem from="1587495999691" duration="1031000" />
+      <workItem from="1587543821191" duration="312000" />
     </task>
     <servers />
   </component>
